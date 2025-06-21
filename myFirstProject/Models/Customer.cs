@@ -5,6 +5,7 @@ namespace myFirstProject.Models;
 
 public partial class Customer
 {
+    // hola mundo
     public int CustomerID { get; set; }
 
     public string? Title { get; set; }
