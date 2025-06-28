@@ -14,7 +14,7 @@ builder.Services.AddDbContext<AdventureWorksContext>(options =>
 // Register repositories
 if (useJson)
 {
-    var jsonPath = Path.Combine(AppContext.BaseDirectory, "customers.json");
+    var jsonPath = Path.Combine(builder.Environment.ContentRootPath, "customers.json");
     builder.Services.AddSingleton<ICustomerRepository>(new JsonCustomerRepository(jsonPath));
 }
 else
