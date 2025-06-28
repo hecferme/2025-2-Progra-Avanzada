@@ -7,6 +7,8 @@ public partial class vProductModelCatalogDescription
 {
     public int ProductModelID { get; set; }
 
+    public string Name { get; set; } = null!;
+
     public string? Summary { get; set; }
 
     public string? Manufacturer { get; set; }

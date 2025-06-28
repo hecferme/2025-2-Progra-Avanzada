@@ -7,6 +7,8 @@ public partial class ProductModel
 {
     public int ProductModelID { get; set; }
 
+    public string Name { get; set; } = null!;
+
     public string? CatalogDescription { get; set; }
 
     public Guid rowguid { get; set; }

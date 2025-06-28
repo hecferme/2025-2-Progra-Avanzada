@@ -13,6 +13,10 @@ public partial class Address
 
     public string City { get; set; } = null!;
 
+    public string StateProvince { get; set; } = null!;
+
+    public string CountryRegion { get; set; } = null!;
+
     public string PostalCode { get; set; } = null!;
 
     public Guid rowguid { get; set; }

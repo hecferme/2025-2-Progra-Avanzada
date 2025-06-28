@@ -17,7 +17,13 @@ public partial class SalesOrderHeader
 
     public byte Status { get; set; }
 
+    public bool OnlineOrderFlag { get; set; }
+
     public string SalesOrderNumber { get; set; } = null!;
+
+    public string? PurchaseOrderNumber { get; set; }
+
+    public string? AccountNumber { get; set; }
 
     public int CustomerID { get; set; }
 

@@ -9,6 +9,8 @@ public partial class CustomerAddress
 
     public int AddressID { get; set; }
 
+    public string AddressType { get; set; } = null!;
+
     public Guid rowguid { get; set; }
 
     public DateTime ModifiedDate { get; set; }

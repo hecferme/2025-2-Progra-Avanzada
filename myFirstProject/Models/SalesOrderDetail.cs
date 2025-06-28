@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using myFirstProject.MyCustomValidators;
 
 namespace myFirstProject.Models;
 
@@ -10,8 +9,6 @@ public partial class SalesOrderDetail
 
     public int SalesOrderDetailID { get; set; }
 
-    //[IsPrimeNumber (ErrorMessage = "El número debe ser primo.")]
-    [PrimeNumberValidator (ErrorMessage ="El número NO debe ser primo.", ShouldBePrime = false)]
     public short OrderQty { get; set; }
 
     public int ProductID { get; set; }

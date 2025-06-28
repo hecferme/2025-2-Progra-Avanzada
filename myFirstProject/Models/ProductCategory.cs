@@ -9,6 +9,8 @@ public partial class ProductCategory
 
     public int? ParentProductCategoryID { get; set; }
 
+    public string Name { get; set; } = null!;
+
     public Guid rowguid { get; set; }
 
     public DateTime ModifiedDate { get; set; }
