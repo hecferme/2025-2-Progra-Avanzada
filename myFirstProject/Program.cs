@@ -22,6 +22,9 @@ else
     builder.Services.AddScoped<ICustomerRepository, SqlCustomerRepository>();
 }
 
+// Add HttpClient factory for API calls
+builder.Services.AddHttpClient();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
