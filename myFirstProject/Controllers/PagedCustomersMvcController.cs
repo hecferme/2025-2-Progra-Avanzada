@@ -24,6 +24,24 @@ public class PagedCustomersMvcController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Search(PagedCustomersViewModel viewModel)
     {
+        return ExecuteSearch(viewModel);
+    }
+
+    [HttpGet]
+    public IActionResult Search(string name, int pageNumber = 1, int pageSize = 10)
+    {
+        var viewModel = new PagedCustomersViewModel
+        {
+            Name = name,
+            PageNumber = pageNumber,
+            PageSize = pageSize
+        };
+        
+        return ExecuteSearch(viewModel);
+    }
+
+    private IActionResult ExecuteSearch(PagedCustomersViewModel viewModel)
+    {
         if (ModelState.IsValid)
         {
             try

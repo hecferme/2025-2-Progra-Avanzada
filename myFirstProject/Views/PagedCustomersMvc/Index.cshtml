@@ -56,24 +56,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var customer in Model.Results.Items)
-                                {
-                                    <tr>
-                                        <td>@customer.CustomerID</td>
-                                        <td>@customer.DisplayName</td>
-                                        <td>@customer.EmailAddress</td>
-                                        <td>@customer.Phone</td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-
-                        <nav>
-                            <div class="pagination-info">
-                                <p>Page @Model.Results.Pagination.PageNumber of @Model.Results.Pagination.TotalPages</p>
-                                <p>Total Items: @Model.Results.Pagination.TotalItems</p>
-                            </div>
-                        </nav>
+                        @foreach (var customer in Model.Results.Items)
+                        {
+                            <tr>
+                                <td>@customer.CustomerID</td>
+                                <td>@customer.DisplayName</td>
+                                <td>@customer.EmailAddress</td>
+                                <td>@customer.Phone</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @await Html.PartialAsync("_Pagination", new myFirstProject.ViewModels.PaginationViewModel 
+                {
+                    Pagination = Model.Results.Pagination,
+                    Name = Model.Name,
+                    PageSize = Model.PageSize
+                })
                     </div>
                 </div>
             }
