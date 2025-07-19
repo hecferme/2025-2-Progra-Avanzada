@@ -3,7 +3,7 @@
     var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
     var name = Model.Name ?? "";
-    var pageSize = Model.PageSize.ToString();
+    var pageSize = Model.Pagination.PageSize.ToString();
     
     // Build URL with query string to ensure all parameters are included
     Func<int, string> buildPaginationUrl = (page) => 

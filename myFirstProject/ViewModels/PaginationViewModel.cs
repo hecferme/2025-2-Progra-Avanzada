@@ -16,9 +16,4 @@ public class PaginationViewModel
     /// Search criteria to preserve in pagination links
     /// </summary>
     public string? Name { get; set; }
-    
-    /// <summary>
-    /// Page size to preserve in pagination links
-    /// </summary>
-    public int PageSize { get; set; } = 10;
 }
